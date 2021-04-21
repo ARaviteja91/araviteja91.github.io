@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing</title>
+
+    <style>
+        .board{
+             text-align: center;
+             margin: 5em;
+             border: solid rgb(47, 127, 219) 10px;
+             border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <h1>Draw anything using your mouse</h1>
+        <hr>
+        <canvas id="canvas">
+
+        </canvas>
+    </div>
+    
+
+    <script>
+        window.addEventListener('load',()=>{
+            resize();
+            document.addEventListener('mousedown', startPainting);
+            document.addEventListener('mouseup', stopPainting);
+            document.addEventListener('mousemove', sketch);
+            window.addEventListener('resize', resize);
+        });
+
+        const canvas = document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+
+        function resize(){
+            ctx.canvas.width = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+        }
+
+        let coord = {x:0,y:0};
+
+        let paint = false;
+
+        function getPosition(event){
+            coord.x = event.clientX - canvas.offsetLeft;
+            coord.y = event.clientY - canvas.offsetTop;
+        }
+
+        function startPainting(event){
+            paint = true;
+            getPosition(event);
+            }
+            function stopPainting(){
+            paint = false;
+        }
+
+        function sketch(event){
+            if(!paint) return;
+            ctx.beginPath();
+            ctx.linewidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+            ctx.moveTo(coord.x,coord.y);
+
+            getPosition(event);
+            ctx.lineTo(coord.x,coord.y);
+            ctx.stroke();
+        }
+    </script>
+
+</body>
+</html>
