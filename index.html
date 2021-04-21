@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <style>
+      .poster{
+        background-image: url('./wall.png');
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .title{
+        width: 500px;
+        padding: 1em;
+      }
+
+      .workcad{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .prj{
+        display: flex;
+        justify-content: space-evenly;
+        /* flex-wrap: wrap; */
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0);
+      }
+
+       
+
+      
+    </style>
+    
+</head>
+<body class="bg-dark text-white">
+
+   
+    
+  <div class="container">
+    <h1><strong>RAVITEJA</strong></h1><small> <em>-Frontend developer</em> </small>
+  </div>
+  
+  <div class="poster">
+     <div class="title">
+      <h1 class="display-1 text-dark">Hello world!</h1> 
+      <p class="display-6 text-dark">
+        I'm <strong>Raviteja</strong>,
+        a front-end developer spealizing in web technology
+      </p>           
+     </div>
+  </div>
+     
+     
+
+    
+  <div class="container text-center p-3" id="about">
+        <!-- <h1>About me</h1>          -->
+         
+
+        <h2>What can i do?</h2>
+        <div class="workcad">
+          
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body">
+              <em>
+                <h5 class="card-title text-dark">Websites</h5>
+                <p class="card-text text-dark">I build awesome landing webpages that will give a jaw dropping moment for your audience</p>     
+              </em>          
+            </div>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;"> 
+            <div class="card-body">
+              <em>
+                <h5 class="card-title text-dark">Webapps</h5>
+                <p class="card-text text-dark">I build good interacting Webapps that make your work simple</p>               
+              </em>
+            </div>
+          </div>
+          
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body">
+              <em>
+                <h5 class="card-title text-dark">Front-end</h5>
+                <p class="card-text text-dark">I build stunning front-end components for your applications</p>               
+              </em>
+            </div>
+          </div>
+
+        </div>
+        
+         
+
+        </em></p>
+
+  </div>
+
+  <div class="container text-center p-3" id="work">
+        <h1>My works</h1>
+        <div class="prj">
+          <div class="card m-3" style="width: 18rem;">
+            <a href=""><img src="./avengers.png" class="card-img-top img-thuumbnail" alt="..." width="200"></a>
+          </div>   
+          
+          <div class="card m-3" style="width: 18rem;">
+            <a href=""><img src="./himalayas.PNG" class="card-img-top img-thuumbnail" alt="..." width="200"></a>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <a href=""> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-easel card-img-top img-thumbnail" viewBox="0 0 16 16">
+                <path d="M8 0a.5.5 0 0 1 .473.337L9.046 2H14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1.85l1.323 3.837a.5.5 0 1 1-.946.326L11.092 11H8.5v3a.5.5 0 0 1-1 0v-3H4.908l-1.435 4.163a.5.5 0 1 1-.946-.326L3.85 11H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4.954L7.527.337A.5.5 0 0 1 8 0zM2 3v7h12V3H2z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <a href=""> <img src="./card.PNG" class="card-img-top img-thumbnail" alt="..."></a>
+          </div>
+        </div>
+  </div>
+
+
+
+  
+  <div class="container text-start p-3" id="contact">
+        <h1>Contact me</h1>
+        <div class="row m-0">
+            <div class="col-2">Mail</div>
+            <div class="col-8">arigraraviteja@gmail.com</div>
+             
+        </div>
+        <div class="row m-0">
+            <div class="col-2">Phone</div>
+            <div class="col-8">+918008521229</div>
+        </div>
+  </div>
+    
+</body>
+</html>
